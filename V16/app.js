@@ -22,7 +22,7 @@ app.get("/post/create",async(req,res)=>{
    let user=await userModel.findOne({_id:"iuhiufgr89y4ub4" });
    user.posts.push(post._id);
    await user.save()
-   res.send(post,user);
+   res.send(post,user );
 })
 app.listen(3000,()=>{
     console.log("server is running...");
